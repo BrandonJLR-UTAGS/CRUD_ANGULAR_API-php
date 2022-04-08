@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="card-header">
+
+    <a class="btn btn-success" routerLink="/agregar-carro/">Agregar nuevo carro</a>
+  </div>
+  <div class="card-body">
+    <h1> Lista de Carros </h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Modelo</th>
+          <th>Detalles</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let carro of Carros; let iControl=index">
+          <td>{{carro.id}}</td>
+          <td>{{carro.nombre}}</td>
+          <td>{{carro.descripcion}}</td>
+          <td>{{carro.precio}}</td>
+          <td>
+              <a class="btn btn-info" routerLink="/editar-carro/{{carro.id}}">Editar</a>
+              <a class="btn btn-danger" (click)="borrarRegistro(carro.id,iControl)" role="button">Borrar</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+</div>

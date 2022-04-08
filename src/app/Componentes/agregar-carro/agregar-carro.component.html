@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="card-header">Agrega Carro</div>
+  <div class="card-body">
+    <form ngNativeValidate [formGroup]="formularioDeCarros" (ngSubmit)="enviarDatos()" >
+      <div class="mb-3">
+        <label for="" class="form-label">Modelo:</label>
+        <input
+        required
+          type="text"
+          class="form-control"
+          name=""
+          formControlName="Modelo"
+          id=""
+          aria-describedby="helpId"
+          placeholder="Escribe modelo"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="" class="form-label">Detalles</label>
+        <input
+        required
+          type="text"
+          class="form-control"
+          name=""
+          formControlName="Descripcion"
+          id=""
+          aria-describedby="helpId"
+          placeholder="Detalles"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="" class="form-label">Precio</label>
+        <input
+        required
+          type="text"
+          class="form-control"
+          name=""
+          formControlName="Precio"
+          id=""
+          aria-describedby="helpId"
+          placeholder="Precio del carro"
+        />
+      </div>
+
+      <div class="btn-group" role="group" aria-label="">
+        <button type="submit" class="btn btn-success">Agregar</button>
+        <button type="button" routerLink="/listar-carro/" class="btn btn-primary">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
